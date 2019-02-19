@@ -4,8 +4,12 @@ const Park = function(name, price, collection = []) {
   this.collection = collection
 }
 
-Park.prototype.addDino = function (dinosaur) {
-  this.collection.push(dinosaur)
+Park.prototype.addDino = function (dino) {
+  this.collection.push(dino);
+};
+
+Park.prototype.removeDino = function (dino) {
+  this.collection.splice(this.collection.indexOf(dino), 1);
 };
 
 module.exports = Park;
