@@ -6,7 +6,7 @@ describe('Park', function() {
 
   beforeEach(function () {
     dinosaur = new Dinosaur('t-rex', 'carnivore', 50);
-
+    dinosaur2 = new Dinosaur("Velociraptor", "carnivore", 35);
 
     park = new Park("Jurrasic Park", 5, [dinosaur]);
   })
@@ -23,7 +23,10 @@ describe('Park', function() {
     assert.deepEqual(park.collection, [dinosaur])
   });
 
-  it('should be able to add a dinosaur to its collection');
+  it('should be able to add a dinosaur to its collection', function () {
+    park.addDino(dinosaur2);
+    assert.deepEqual(park.collection, [dinosaur, dinosaur2])
+  });
 
   it('should be able to remove a dinosaur from its collection');
 
