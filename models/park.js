@@ -27,6 +27,21 @@ Park.prototype.findSpecies = function (species) {
   return foundDinos;
 };
 
+Park.prototype.removeSpecies = function (species) {
+  const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
+  this.collection = resultCollection;
+
+
+
+
+  // for (let i = this.collection-1; i=0; i--) {
+  //   let currentDino = this.collection[i];
+  //   if (currentDino.species === species) {
+  //     this.collection.splice(i, 1);
+  //   }
+  // }
+};
+
 module.exports = Park;
 
 

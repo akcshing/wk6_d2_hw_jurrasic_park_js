@@ -50,6 +50,11 @@ describe('Park', function() {
     assert.deepEqual(park.findSpecies("Velociraptor"), [dinosaur2, dinosaur3])
   });
 
-  it('should be able to remove all dinosaurs of a particular species');
+  it('should be able to remove all dinosaurs of a particular species', function(){
+    park.addDino(dinosaur2);
+    park.addDino(dinosaur3);
+    park.removeSpecies("Velociraptor");
+    assert.deepEqual(park.collection, [dinosaur])
+  });
 
 });
