@@ -28,13 +28,23 @@ Park.prototype.findSpecies = function (species) {
 };
 
 Park.prototype.removeSpecies = function (species) {
-  const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
-  this.collection = resultCollection;
+  let remainingDinos = []
+  for (let dinosaur of this.collection){
+    if (dinosaur.species !== species) {
+      remainingDinos.push(dinosaur);
+    }
+  }
+  this.collection = remainingDinos
+
+
+
+  // const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
+  // this.collection = resultCollection;
 
 
 
 
-  // for (let i = this.collection-1; i=0; i--) {
+  // for (let i = this.collection.length-1; i=0; i--) {
   //   let currentDino = this.collection[i];
   //   if (currentDino.species === species) {
   //     this.collection.splice(i, 1);
