@@ -57,4 +57,18 @@ describe('Park', function() {
     assert.deepEqual(park.collection, [dinosaur])
   });
 
+  it("should be able to calculate the total number of visitors each day", function(){
+    park.addDino(dinosaur2);
+    assert.strictEqual(park.calcDayVistors(), 85);
+  });
+
+  it("should be able to calculate the total number of visitors per year", function(){
+
+
+  });
+
+  it("should be able to calculate the total revenue from ticket sales for one year", function(){
+
+
+  });
 });

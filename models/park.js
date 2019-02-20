@@ -36,6 +36,13 @@ Park.prototype.removeSpecies = function (species) {
   }
   this.collection = remainingDinos
 
+Park.prototype.calcDayVistors = function () {
+  let totalVisitors = 0
+  for (let dinosaur of this.collection){
+    totalVisitors += dinosaur.guestsAttractedPerDay
+  }
+  return totalVisitors;
+};
 
 
   // const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
