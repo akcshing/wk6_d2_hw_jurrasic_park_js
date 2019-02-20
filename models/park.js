@@ -44,6 +44,11 @@ Park.prototype.calcDayVistors = function () {
   return totalVisitors;
 };
 
+Park.prototype.calcYearVisitors = function () {
+  let yearlyVisitors = this.calcDayVistors() * 365;
+  return yearlyVisitors;
+};
+
 
   // const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
   // this.collection = resultCollection;

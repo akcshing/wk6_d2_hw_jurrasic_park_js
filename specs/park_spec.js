@@ -63,8 +63,8 @@ describe('Park', function() {
   });
 
   it("should be able to calculate the total number of visitors per year", function(){
-
-
+    park.addDino(dinosaur3);
+    assert.strictEqual(park.calcYearVisitors(), 90*365)
   });
 
   it("should be able to calculate the total revenue from ticket sales for one year", function(){
