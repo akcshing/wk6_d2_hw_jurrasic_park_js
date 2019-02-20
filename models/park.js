@@ -49,6 +49,10 @@ Park.prototype.calcYearVisitors = function () {
   return yearlyVisitors;
 };
 
+Park.prototype.calcRevenue = function () {
+  let revenue = this.calcYearVisitors() * this.price;
+  return revenue;
+};
 
   // const resultCollection = this.collection.filter(dinosaur => dinosaur.species === species);
   // this.collection = resultCollection;
